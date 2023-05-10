@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.fragment.findNavController
 import com.example.navigationcomponents.databinding.FragmentPrimerBinding
 import com.example.navigationcomponents.databinding.FragmentSegundoBinding
 
@@ -24,6 +25,13 @@ class SegundoFragment : Fragment() {
         // Inflate the layout for this fragment
         mBinding = FragmentSegundoBinding.inflate(inflater, container,false)
         return mBinding.root
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        mBinding.btnRegresarFragment1.setOnClickListener {
+            findNavController().navigate(R.id.primerFragment)
+        }
     }
 
 }
