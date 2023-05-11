@@ -1,5 +1,6 @@
 package com.example.navigationcomponents
 
+import android.net.Uri
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -45,7 +46,7 @@ class SegundoFragment : Fragment() {
         val text = mBinding.tvSegudoFragment
 
         mBinding.btnRegresarFragment1.setOnClickListener {
-            findNavController().navigate(R.id.primerFragment)
+            findNavController().navigate(Uri.parse("cursoandroid://card"))
         }
         text.text = "$nombre $edad"
     }

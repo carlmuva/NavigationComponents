@@ -31,8 +31,7 @@ class PrimerFragment : Fragment() {
 
         mBinding.btnIrFragment2.setOnClickListener {
             findNavController().navigate(R.id.action_primerFragment_to_segundoFragment,
-                bundleOf("nombre" to "Carlos", "edad" to 29)
-            )
+                bundleOf("nombre" to "Carlos", "edad" to 29))
         }
 
     }

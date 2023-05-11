@@ -22,5 +22,16 @@
         android:id="@+id/segundoFragment"
         android:name="com.example.navigationcomponents.SegundoFragment"
         android:label="fragment_segundo"
-        tools:layout="@layout/fragment_segundo" />
+        tools:layout="@layout/fragment_segundo" >
+        <argument
+            android:name="nombre"
+            app:argType="string"
+            app:nullable="true"
+            android:defaultValue="NO_NAME " />
+        <argument
+            android:name="edad"
+            app:argType="integer"
+            android:defaultValue="-1" />
+    </fragment>
+    <include app:graph="@navigation/product_graph" />
 </navigation>
