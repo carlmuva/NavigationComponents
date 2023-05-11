@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.os.bundleOf
 import androidx.navigation.fragment.findNavController
 import com.example.navigationcomponents.databinding.FragmentPrimerBinding
 
@@ -29,7 +30,9 @@ class PrimerFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         mBinding.btnIrFragment2.setOnClickListener {
-            findNavController().navigate(R.id.action_primerFragment_to_segundoFragment)
+            findNavController().navigate(R.id.action_primerFragment_to_segundoFragment,
+                bundleOf("nombre" to "Carlos", "edad" to 29)
+            )
         }
 
     }
